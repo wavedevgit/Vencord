@@ -68,6 +68,14 @@ export default definePlugin({
                 match: /(?=let \i=window;)/,
                 replace: "return false;"
             }
+        },
+        {
+            find: ".__wbg_blockeddomainsstore_free",
+            replacement: {
+                // Make launch signature clean (returns undefined to every property checked for client mods)
+                match: /{return Reflect\.get\(\i,\i\)}\),arguments\)}/,
+                replace: "{return undefined}),arguments)}"
+            }
         }
     ],
 
