@@ -5,7 +5,7 @@
  */
 
 import { definePluginSettings } from "@api/Settings";
-import { EquicordDevs } from "@utils/constants";
+import { Devs } from "@utils/constants";
 import definePlugin, { OptionType } from "@utils/types";
 
 export const settings = definePluginSettings({
@@ -25,7 +25,7 @@ export default definePlugin({
     name: "TenorCord",
     description:
         "Add support for tenor.",
-    authors: [EquicordDevs.HappyEnderman],
+    authors: [Devs.HappyEnderman],
     tags: ["Chat", "Emotes", "Customisation"],
 
     settings,
